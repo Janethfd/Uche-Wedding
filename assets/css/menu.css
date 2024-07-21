@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&amp;family=Sail&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');/* 1.1 Theme Reset Style */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+/* 1.1 Theme Reset Style */
+html {
+  font-size: 15px;
+}
+
+:root {
+  scroll-behavior: unset;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  color: #5C5C5C;
+  background: none; /* Remove default background */
+  text-align: center;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1; 
+}
+
+/* body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/beautif.avif");
+  background-size: cover;
+  text-align: center;
+  background-position: center;
+  filter: blur(5px); 
+  z-index: -1; 
+} */
+
+p {
+  font-size: 18px;
+  color: #5C5C5C;
+  line-height: 1.8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #101010;
+  font-family: "Dancing Script";
+  font-weight: 700;
+}
+
+#container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    /* border-radius: 20px 240px 0 0; */
+    overflow: hidden;
+    box-shadow: 12px 13px 14px rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(0 0 10px #000);
+    animation: glow 3s alternate infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 10px #000);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px #FE828C);
+    }
+}
+/* CSS to position the logo */
+.navbar-header {
+    display: flex;
+    justify-content: flex-start; /* Default to the left */
+}
+
+.navbar-header .navbar-brand {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Sail", cursive;
+    color: #657150;
+  }
+  
+.navbar-header .navbar-brand:hover {
+    color: #657150;
+}
+  
+
+@media (max-width: 767px) {
+    .navbar-header {
+        justify-content: flex-end; /* Move to the right on mobile view */
+    }
+}
+
+img {
+    max-width: 800px;
+    width: 90%;
+    height: 300px;
+    object-fit: cover; 
+    overflow: hidden;
+    z-index: 12;
+    border-radius: 10px 219px 5px 8px;
+    box-shadow: 12px 13px 14px rgba(0, 0, 0, 0.9);
+}
+
+.title {
+    max-width: 100%;
+    background: transparent;
+    margin-top: 20px;
+    font-size: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+span {
+    color: #FE828C;
+}
+
+#details {
+    max-width: 500px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* 
+h2 {
+    font-size: 30px;
+    color: #ff7e5f;
+} */
+
+#details p {
+    margin: 3px 0;
+}
+
+/* Polyline Styling */
+svg {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: 100px;
+}
+
+.polyline {
+  fill: none;
+  stroke: #e793a0;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.draw {
+  animation: draw .4s linear infinite;
+}
+
+@keyframes draw {
+  0% {
+      stroke-dasharray: 0, 1000;
+  }
+  100% {
+      stroke-dasharray: 1000, 0;
+  }
+}
+
+#footer {
+    background-color: #ff7e5f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
